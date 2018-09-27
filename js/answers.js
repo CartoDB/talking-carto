@@ -56,11 +56,30 @@ search.addWidget(
 // Add this after all the search.addWidget() calls
 search.start();
 
-$('.tc-launcher-open-icon, .tc-launcher-close-icon').on('click', function(){
+/* $('.tc-launcher-open-icon, .tc-launcher-close-icon').on('click', function(){
     $('.tc-launcher-close-icon').toggleClass('open');
     $('.tc-messenger').toggleClass('open');
     $('.tc-launcher-open-icon').toggleClass('close');
-})
+}) */
+
+$( function() {
+  $( ".dialog" ).dialog({
+    autoOpen: false,
+    show: {
+      duration: 1000
+    },
+    hide: {
+      duration: 1000
+    }
+  });
+
+  $( ".opener" ).on( "click", function() {
+    $( ".dialog" ).dialog( "open" );
+    $( ".dialog" ).dialog({
+      position: { my: "left bottom", at: "right top", of: ".opener" }
+    });
+  });
+} );
 
 $( function() {
   $( "#tc-messenger" ).tabs();

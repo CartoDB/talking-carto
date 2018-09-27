@@ -20,48 +20,46 @@
 </head>
 
 
-<body id="tc-container-body">
-    <div id="tc-container">
-        <div class="tc-launcher">
-            <div class="tc-launcher-open-icon">
-                <img src="./img/question-mark.svg" alt="">
+<body id="tc-container-body">               
+
+    <div class="tc-launcher opener">
+        <div class="tc-launcher-open-icon">
+            <img src="./img/question-mark.svg" alt="">
+        </div>
+        <div class="tc-launcher-close-icon">
+            <img src="./img/question-mark-close.svg" alt="">
+        </div>
+
+    <div id="tc-container" class="dialog">
+        <div id="tc-messenger" class="tc-messenger">
+            <div class="tc-messenger-header">
+                <ul>
+                    <li><a href="#tc-answers">Answers</a></li>
+                    <li><a href="#tc-ask">Ask</a></li>
+                </ul>
+
+            <!-- <div class="tc-messenger-body"></div> -->
+            <div id="tc-answers" class="tc-answers">
+                <div id="tc-messenger-suggestions" class="tc-messenger-suggestions"></div>
+                <input id="tc-messenger-input" placeholder="Ask us">
             </div>
-            <div class="tc-launcher-close-icon">
-                <img src="./img/question-mark-close.svg" alt="">
+            
+            <!-- support -->
+            <div id="tc-ask" class="tc-ask">
+                <form action="">
+                    <div class="tc-ask-form">
+                        <h2>Send a message</h2>
+                        <h4>Our Support Team is here to help</h4>
+
+                        <input type="text" placeholder="Subject" name="subject" required>
+                        <input type="password" placeholder="How can we help?" name="message" required>
+
+                        <div><input type="checkbox" name="screenshot" value="" checked="checked">Include screenshot</div>
+
+                        <button type="submit" class="registerbtn">Send a message</button>
+                    </div>
+                </form>
             </div>
-            <div id="tc-messenger" class="tc-messenger">
-                <div class="tc-messenger-header">
-                    <ul>
-                        <li><a href="#tc-answers">Answers</a></li>
-                        <li><a href="#tc-ask">Ask</a></li>
-                    </ul>
-
-                <!-- <div class="tc-messenger-body"></div> -->
-                <div id="tc-answers" class="tc-answers">
-                    <div id="tc-messenger-suggestions" class="tc-messenger-suggestions"></div>
-                    <input id="tc-messenger-input" placeholder="Ask us">
-                </div>
-                <!-- support -->
-                <div id="tc-ask" class="tc-ask">
-                    <form action="">
-                        <div class="tc-ask-form">
-                            <h2>Send a message</h2>
-                            <h4>Our Support Team is here to help</h4>
-
-                            <input type="text" placeholder="Subject" name="subject" required>
-                        
-                            <input type="password" placeholder="How can we help?" name="message" required>
-
-                            <div><input type="checkbox" name="screenshot" value="" checked="checked">Include screenshot</div>
-
-                            <button type="submit" class="registerbtn">Send a message</button>
-
-                        </div>
-
-                    </form>
-                </div>
-            </div>
-
         </div>
     </div>
 

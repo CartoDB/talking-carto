@@ -1,3 +1,9 @@
+.opener {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
 .tc-launcher-open-icon {
     display: flex;
 }
@@ -11,7 +17,7 @@
     display: flex;
 }
 .tc-messenger {
-    display: none;
+    
 }
 .tc-messenger.open {
     width: 376px;
