@@ -1,0 +1,37 @@
+.tc-launcher-open-icon {
+    display: flex;
+}
+.tc-launcher-open-icon.close {
+    display: none;
+}
+.tc-launcher-close-icon {
+    display: none;
+}
+.tc-launcher-close-icon.open {
+    display: flex;
+}
+.tc-messenger {
+    display: none;
+}
+.tc-messenger.open {
+    width: 376px;
+    display: flex;
+    flex-direction: column;
+}
+.tc-messenger-header {
+    height: 60px;
+    background-color: #6e00dc;
+}
+.tc-answers{
+    display: flex;
+    flex-direction: column;
+} 
+.tc-messenger-suggestions {
+    width: 376px;
+    height: 400px;
+    overflow-y: scroll;
+}
+.tc-ask-form {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.7.0/dist/instantsearch.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.7.0/dist/instantsearch.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.7.0/dist/instantsearch-theme-algolia.min.css">
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Always use `2.x` versions in production rather than `2` to mitigate any side effects on your website,
+    Find the latest version on InstantSearch.js website: https://community.algolia.com/instantsearch.js/v2/guides/usage.html -->
+</head>
+
+
+<body id="tc-container-body">
+    <div id="tc-container">
+        <div class="tc-launcher">
+            <div class="tc-launcher-open-icon">
+                <img src="./img/question-mark.svg" alt="">
+            </div>
+            <div class="tc-launcher-close-icon">
+                <img src="./img/question-mark-close.svg" alt="">
+            </div>
+            <div id="tc-messenger" class="tc-messenger">
+                <div class="tc-messenger-header">
+                    <ul>
+                        <li><a href="#tc-answers">Answers</a></li>
+                        <li><a href="#tc-ask">Ask</a></li>
+                    </ul>
+
+                <!-- <div class="tc-messenger-body"></div> -->
+                <div id="tc-answers" class="tc-answers">
+                    <div id="tc-messenger-suggestions" class="tc-messenger-suggestions"></div>
+                    <input id="tc-messenger-input" placeholder="Ask us">
+                </div>
+                <!-- support -->
+                <div id="tc-ask" class="tc-ask">
+                    <form action="">
+                        <div class="tc-ask-form">
+                            <h2>Send a message</h2>
+                            <h4>Our Support Team is here to help</h4>
+
+                            <input type="text" placeholder="Subject" name="subject" required>
+                        
+                            <input type="password" placeholder="How can we help?" name="message" required>
+
+                            <div><input type="checkbox" name="screenshot" value="" checked="checked">Include screenshot</div>
+
+                            <button type="submit" class="registerbtn">Send a message</button>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./js/answers.js"></script>
+    <script src="./js/ask.js"></script>
+</body>
+</html>
