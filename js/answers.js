@@ -75,7 +75,7 @@ $( function() {
 
   $( ".opener" ).on( "click", function() {
     $( ".dialog" ).dialog( "open" );
-    $( ".dialog" ).dialog( "option", "height", 500 );
+    $( ".dialog" ).dialog( "option", "height", 450 );
     $( ".dialog" ).dialog( "option", "width", 375 );
     $( ".dialog" ).dialog({
       position: { my: "left bottom", at: "right top", of: ".opener" },

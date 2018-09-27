@@ -1,3 +1,7 @@
+body {
+    font: 16px/24px 'Open Sans';
+}
+
 .opener {
     position: fixed;
     right: 20px;
@@ -33,8 +37,6 @@
     flex-direction: column;
 } 
 .tc-messenger-suggestions {
-    width: 376px;
-    height: 400px;
     overflow-y: scroll;
 }
 .tc-ask-form {
@@ -46,19 +48,118 @@
 .ui-widget.ui-widget-content {
     background: transparent;
     border: 0;
+    padding: 0 !important;
 }
 
 .ui-dialog .ui-dialog-content {
     background-color: #f9fafa !important;
+    box-shadow: 0 1px 1px 0 rgba(85,95,110,.2);
     border-radius: 4px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    height: 100vh;
     -ms-flex-pack: end;
-    justify-content: flex-end;
+    justify-content: initial;
     min-height: 200px;
     width: 100%;
     border: 0;
+    padding: 0 !important;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    padding: 0;
+}
+
+.ui-widget-header {
+    border: 0;
+    background: transparent;
+    color: #333333;
+    font-weight: bold;
+}
+
+.ui-dialog-titlebar .ui-state-default, .ui-widget-content .ui-state-default, 
+.ui-dialog-titlebar .ui-widget-header .ui-state-default, 
+.ui-dialog-titlebar .ui-button, 
+html .ui-dialog-titlebar .ui-button.ui-state-disabled:hover, 
+html .ui-dialog-titlebar .ui-button.ui-state-disabled:active {
+    border: none;
+    background: rgba(57,73,86,0.5);
+    font-weight: normal;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.ui-button .ui-icon,
+.ui-widget-header .ui-icon,
+.ui-icon, .ui-widget-content .ui-icon {
+    background-image: none;
+}
+
+.ui-icon-closethick::before {
+    content: "close";
+}
+
+#tc-answers.ui-tabs-panel {
+    padding: 0 !important;
+}
+
+#tc-messenger-suggestions {
+    padding: 10px 20px;
+    max-height: 360px;
+}
+
+#tc-messenger-suggestions .post-item a {
+    color: #3197d6;
+    text-decoration: none;
+}
+
+#tc-messenger-suggestions .post-item {
+    margin: 20px 0;
+}
+
+#tc-messenger-suggestions .post-item h2 {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+#tc-messenger-suggestions .post-item p {
+    font-size: 12px;
+    color: #BFBDC0;
+    line-height: 1.3;
+    margin-top: 10px;
+}
+
+.ais-search-box {
+    max-width: 376px;
+    position: absolute;
+    bottom: 0;
+    height: 65px;
+}
+
+.ais-search-box--input {
+    webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font: inherit;
+    background: #fff;
+    display: inline-block;
+    border: 0;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transition: box-shadow none !important;
+    padding: 20px 10px 30px 35px !important;
+    vertical-align: middle;
+    white-space: normal;
+    height: 100%;
+    width: 100%;
+}
+
+
+.ais-search-box--loading-indicator-wrapper, .ais-search-box--magnifier {
+    fill: #bfc7d8;
+    left: 12px;
+    top: calc(44% - 18px/2);
 }

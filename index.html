@@ -12,6 +12,7 @@
     <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
     <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -26,9 +27,7 @@
         <div class="tc-launcher-open-icon">
             <img src="./img/question-mark.svg" alt="">
         </div>
-        <div class="tc-launcher-close-icon">
-            <img src="./img/question-mark-close.svg" alt="">
-        </div>
+    </div>
 
     <div id="tc-container" class="dialog">
         <div id="tc-messenger" class="tc-messenger">
@@ -37,9 +36,9 @@
                     <li><a href="#tc-answers">Answers</a></li>
                     <li><a href="#tc-ask">Ask</a></li>
                 </ul>
-
-            <!-- <div class="tc-messenger-body"></div> -->
-            <div id="tc-answers" class="tc-answers">
+            </div>
+            <div class="tc-messenger-body">
+            <div id="tc-answers">
                 <div id="tc-messenger-suggestions" class="tc-messenger-suggestions"></div>
                 <input id="tc-messenger-input" placeholder="Ask us">
             </div>
@@ -61,6 +60,7 @@
                 </form>
             </div>
         </div>
+    </div>
     </div>
 
     <script src="./js/answers.js"></script>
