@@ -136,6 +136,10 @@ html .ui-dialog-titlebar .ui-button.ui-state-disabled:active {
 
 #tc-messenger-suggestions .post-item {
     margin: 20px 0;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 4px;
+    padding: 10px;
 }
 
 #tc-messenger-suggestions .post-item h2 {
@@ -158,6 +162,7 @@ html .ui-dialog-titlebar .ui-button.ui-state-disabled:active {
     bottom: 0;
     height: auto;
     margin-top:3px;
+    border-top: 1px solid #eee;
 }
 
 .ais-search-box--input {
