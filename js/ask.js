@@ -73,13 +73,11 @@ function getUserInfo() {
             credentials: 'include',
             mode: 'cors'
           }
-        ).then(function(response) {
-            console.log('Error', response)
-        }).then(function(jsonResponse) {
+        ).then(function(jsonResponse) {
+            console.log(jsonResponse)
             var userInfo = jsonResponse;
             if(jsonResponse.user_data){
                 setUserInfoForm(jsonResponse.user_data)
-                console.log('User Data', jsonResponse.user_data)
             }
         })
     }
