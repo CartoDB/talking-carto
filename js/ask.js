@@ -95,6 +95,7 @@ function sendMessage() {
 
 $("#tc-form").submit(function(event){
     event.preventDefault();
+    $('.form-sent').show();
+    $('#tc-form').hide();
     sendMessage()
-    //TO FILL WITH LAST SCREEN
 })
