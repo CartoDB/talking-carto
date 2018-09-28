@@ -82,9 +82,9 @@ function sendMessage() {
     var template_id = 'template_9tPC1hOy';
     var template_params = {
     name: 'Cillas',
-    reply_email: $('#tc-email'),
-    message: $('#tc-message'),
-    subject: $('#tc-subject'),
+    reply_email: $('#tc-email').val(),
+    message: $('#tc-message').val(),
+    subject: $('#tc-subject').val(),
     browser: currentNavigator,
     screenshot: $('#tc-screenshot-image').attr('src'),
     url: location.href
@@ -93,3 +93,8 @@ function sendMessage() {
 
 }
 
+$("#tc-form").submit(function(event){
+    event.preventDefault();
+    sendMessage()
+    //TO FILL WITH LAST SCREEN
+})
