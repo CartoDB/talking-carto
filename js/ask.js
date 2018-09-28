@@ -71,25 +71,25 @@ function setUserInfoForm(userData) {
     $('#tc-email').val(userData.email);
 }
 
-function getUserInfo() {
-    if (isConnected()) {
-        var apiUrl = getBaseURL() + "/api/v3/me";
-        fetch(apiUrl, {
-            method: 'GET',
-            credentials: 'include',
-            mode: 'cors'
-          }
-        ).then(function(jsonResponse) {
-            console.log(jsonResponse)
-            var userInfo = jsonResponse;
-            if(jsonResponse.user_data){
-                setUserInfoForm(jsonResponse.user_data)
-            }
-        })
-    }
+function setUserInfoFormMock(userMail) {
+    $('#tc-email').val(userMail);
 }
-
-getUserInfo();
-
+setUserInfoFormMock("cillas@cartodb.com")
 
 /* Make support bee request to open ticket */
+function sendMessage() {
+    var service_id = 'gmail';
+    var template_id = 'template_9tPC1hOy';
+    var template_params = {
+    name: 'Cillas',
+    reply_email: $('#tc-email'),
+    message: $('#tc-message'),
+    subject: $('#tc-subject'),
+    browser: currentNavigator,
+    screenshot: $('#tc-screenshot-image').attr('src'),
+    url: location.href
+    };
+    emailjs.send(service_id,template_id,template_params);
+
+}
+
