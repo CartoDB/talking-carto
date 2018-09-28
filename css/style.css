@@ -331,3 +331,7 @@ button:focus {
 .tc-screenshot-image {
     width: 300px;
 }
+
+.form-sent a {
+    color: #3197d6;
+}
