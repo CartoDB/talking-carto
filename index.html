@@ -23,14 +23,15 @@
 
 
 <body id="tc-container-body">               
+        <img src="./img/talking-heads.jpg" alt="">
 
-    <div class="tc-launcher opener">
+    <div class="tc-launcher opener" data-html2canvas-ignore="true">
         <div class="tc-launcher-open-icon">
             <img src="./img/question-mark.svg" alt="">
         </div>
     </div>
 
-    <div id="tc-container" class="dialog shadow-sm">
+    <div id="tc-container" class="dialog shadow-sm" data-html2canvas-ignore="true">
         <div id="homescreen">
             <div class="container">
             <h1>Suggested for you</h1>
@@ -82,12 +83,17 @@
                                 <textarea class="form-control" name="message" placeholder="How can we help?" rows="7"></textarea>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" name="screenshot" type="checkbox" value="" checked="checked">
+                            <input id="tc-screenshot-checkbox" class="form-check-input" name="screenshot" type="checkbox" value="" checked="checked">
                             <label class="form-check-label" for="defaultCheck1">
                                 Include screenshot
                             </label>
+                            <div id="tc-screenshoot-sample" class="tc-screenshoot-sample"></div>
                         </div>
-                        <br/>
+                        <div class="form-group">
+                            <input id="tc-browser"type="hidden" placeholder="" name="browser">
+                            <input id="tc-email"type="hidden" placeholder="" name="email">
+                        </div>
+
                         <button type="submit" class="btn btn-primary btn-block btn-lg">Send a message</button>
                     </div>
                 </form>
@@ -95,7 +101,7 @@
         </div>
     </div>
     </div>
-
+    <script src="./js/vendor/html2canvas.min.js"></script>
     <script src="./js/answers.js"></script>
     <script src="./js/ask.js"></script>
 </body>
