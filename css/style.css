@@ -171,18 +171,21 @@ html .ui-dialog-titlebar .ui-button.ui-state-disabled:active {
     border-radius: 0 !important;
     box-shadow: none !important;
     transition: none !important;
-    padding: 20px 10px 15px 40px !important;
+    padding: 15px 10px 15px 40px !important;
     vertical-align: middle;
     white-space: normal;
     height: 100%;
     width: 100%;
 }
 
+.ais-search-box--input::placeholder {
+    color: #bfbfbf;
+}
 
 .ais-search-box--loading-indicator-wrapper, .ais-search-box--magnifier {
     fill: #bfc7d8;
     left: 12px;
-    top: calc(57% - 18px/2);
+    top: calc(50% - 18px/2);
 }
 
 .btn-primary {
@@ -252,4 +255,8 @@ html .ui-button.ui-state-disabled:active {
 
 .arrow path {
     fill: #ffffff;
+}
+
+.opener {
+    cursor: pointer;
 }
