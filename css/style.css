@@ -178,7 +178,9 @@ html .ui-dialog-titlebar .ui-button.ui-state-disabled:active {
     width: 100%;
 }
 
-.ais-search-box--input::placeholder {
+.ais-search-box--input::placeholder,
+.form-group input::placeholder,
+.form-group textarea::placeholder {
     color: #bfbfbf;
 }
 
@@ -213,7 +215,7 @@ html .ui-dialog-titlebar .ui-button.ui-state-disabled:active {
 .form-group textarea,
 label {
     font-size: 14px;
-    color: #60508e;
+    color: #777;
 }
 
 .ui-state-default, 
