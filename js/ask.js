@@ -7,10 +7,15 @@ function getScreenshot() {
 }
 
 $('#tc-screenshot-checkbox').on('change', function() {
+    // if(this.checked) {
+    //     getScreenshot()
+    // } else {
+    //     $('#tc-screenshoot-sample').empty();
+    // }
     if(this.checked) {
-        getScreenshot()
+        $('#tc-screenshot-image').show()
     } else {
-        $('#tc-screenshoot-sample').empty();
+        $('#tc-screenshot-image').hide()
     }
 })
 
