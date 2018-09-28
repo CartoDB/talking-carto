@@ -87,3 +87,22 @@ $( function() {
 $( function() {
   $( "#tc-messenger" ).tabs();
 } );
+
+$('.ais-search-box').keypress(function(event) {
+  if (event.keyCode == 13) {
+      $('.tc-messenger').show();
+      $('#homescreen').hide();
+  }
+});
+
+$('body').on('click', '.arrow', function() {
+  event.preventDefault();
+  $('.tc-messenger').hide();
+  $('#homescreen').show();
+});
+
+$('body').on('click', '.activate-ask', function() {
+  event.preventDefault();
+  $('.tc-messenger').show();
+  $('#homescreen').hide();
+});

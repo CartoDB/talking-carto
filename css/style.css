@@ -263,6 +263,7 @@ button:focus {
     margin-left: 5px;
     line-height: 45px;
     color: #fff !important;
+    cursor: pointer;
 }
 
 .arrow path {
@@ -271,4 +272,52 @@ button:focus {
 
 .opener {
     cursor: pointer;
+}
+
+#homescreen .tc-messenger-suggestions,
+#homescreen .tc-messenger {
+    display: none;
+}
+
+#homescreen .container {
+    padding: 20px;
+}
+
+#homescreen h1 {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+#homescreen ul {
+    padding: 0 20px;
+}
+
+#homescreen li {
+    margin: 10px 0;
+    font-size: 13px;
+    color: #999;
+}
+
+#homescreen a {
+    color: #3197d6;
+}
+
+:focus {
+    outline: none;
+}
+
+#homescreen hr {
+    margin: 40px 0;
+    display: block;
+}
+
+#homescreen p {
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+#homescreen a {
+    padding-left: 5px;
 }
