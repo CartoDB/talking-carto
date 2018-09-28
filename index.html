@@ -15,6 +15,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <!-- Always use `2.x` versions in production rather than `2` to mitigate any side effects on your website,
     Find the latest version on InstantSearch.js website: https://community.algolia.com/instantsearch.js/v2/guides/usage.html -->
@@ -29,33 +30,43 @@
         </div>
     </div>
 
-    <div id="tc-container" class="dialog">
+    <div id="tc-container" class="dialog shadow-sm">
         <div id="tc-messenger" class="tc-messenger">
             <div class="tc-messenger-header">
-                <ul>
+                <ul class="mx-auto">
                     <li><a href="#tc-answers">Answers</a></li>
                     <li><a href="#tc-ask">Ask</a></li>
                 </ul>
+                <div class="ask-header" style="display:none">
+                    <h2>Send a message</h2>
+                    <h4>Our Support Team is here to help</h4>
+                </div>
             </div>
             <div class="tc-messenger-body">
-            <div id="tc-answers">
-                <div id="tc-messenger-suggestions" class="tc-messenger-suggestions"></div>
-                <input id="tc-messenger-input" placeholder="Ask us">
-            </div>
+                <div id="tc-answers">
+                    <div id="tc-messenger-suggestions" class="tc-messenger-suggestions"></div>
+                    <input id="tc-messenger-input" placeholder="Ask us">
+                </div>
             
             <!-- support -->
             <div id="tc-ask" class="tc-ask">
                 <form action="">
                     <div class="tc-ask-form">
-                        <h2>Send a message</h2>
-                        <h4>Our Support Team is here to help</h4>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject" name="subject" required>
+                        </div>
 
-                        <input type="text" placeholder="Subject" name="subject" required>
-                        <input type="password" placeholder="How can we help?" name="message" required>
-
-                        <div><input type="checkbox" name="screenshot" value="" checked="checked">Include screenshot</div>
-
-                        <button type="submit" class="registerbtn">Send a message</button>
+                        <div class="form-group">
+                                <textarea class="form-control" name="message" placeholder="How can we help?" rows="7"></textarea>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" name="screenshot" type="checkbox" value="" checked="checked">
+                            <label class="form-check-label" for="defaultCheck1">
+                                Include screenshot
+                            </label>
+                        </div>
+                        <br/>
+                        <button type="submit" class="btn btn-primary">Send a message</button>
                     </div>
                 </form>
             </div>

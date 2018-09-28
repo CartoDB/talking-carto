@@ -29,9 +29,14 @@ body {
     flex-direction: column;
 }
 .tc-messenger-header {
-    height: 60px;
-    background-color: #6e00dc;
+    height: auto;
+    background-color: #725ead;
 }
+
+.tc-messenger-header ul {
+    padding: 10px 20px !important;
+}
+
 .tc-answers{
     display: flex;
     flex-direction: column;
@@ -53,7 +58,6 @@ body {
 
 .ui-dialog .ui-dialog-content {
     background-color: #f9fafa !important;
-    box-shadow: 0 1px 1px 0 rgba(85,95,110,.2);
     border-radius: 4px;
     display: -ms-flexbox;
     display: flex;
@@ -78,7 +82,8 @@ body {
     font-weight: bold;
 }
 
-.ui-dialog-titlebar .ui-state-default, .ui-widget-content .ui-state-default, 
+.ui-dialog-titlebar .ui-state-default, 
+.ui-dialog-titlebar .ui-widget-content .ui-state-default, 
 .ui-dialog-titlebar .ui-widget-header .ui-state-default, 
 .ui-dialog-titlebar .ui-button, 
 html .ui-dialog-titlebar .ui-button.ui-state-disabled:hover, 
@@ -88,12 +93,24 @@ html .ui-dialog-titlebar .ui-button.ui-state-disabled:active {
     font-weight: normal;
     border-radius: 20px;
     color: #fff;
+    width: 80px;
+    height: 25px;
+}
+
+.ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-button:hover .ui-icon, .ui-button:focus .ui-icon {
+    background-image: none !important;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+    margin: -15px 0 0 0;
 }
 
 .ui-button .ui-icon,
 .ui-widget-header .ui-icon,
-.ui-icon, .ui-widget-content .ui-icon {
+.ui-icon, 
+.ui-widget-content .ui-icon {
     background-image: none;
+    width: 200px;
 }
 
 .ui-icon-closethick::before {
@@ -133,10 +150,10 @@ html .ui-dialog-titlebar .ui-button.ui-state-disabled:active {
 }
 
 .ais-search-box {
-    max-width: 376px;
+    max-width: 100%;
     position: absolute;
     bottom: 0;
-    height: 65px;
+    height: auto;
 }
 
 .ais-search-box--input {
@@ -149,8 +166,8 @@ html .ui-dialog-titlebar .ui-button.ui-state-disabled:active {
     border: 0;
     border-radius: 0 !important;
     box-shadow: none !important;
-    transition: box-shadow none !important;
-    padding: 20px 10px 30px 35px !important;
+    transition: none !important;
+    padding: 20px 10px 15px 40px !important;
     vertical-align: middle;
     white-space: normal;
     height: 100%;
@@ -161,5 +178,31 @@ html .ui-dialog-titlebar .ui-button.ui-state-disabled:active {
 .ais-search-box--loading-indicator-wrapper, .ais-search-box--magnifier {
     fill: #bfc7d8;
     left: 12px;
-    top: calc(44% - 18px/2);
+    top: calc(57% - 18px/2);
+}
+
+.btn-primary {
+    background: #725ead;
+    border: 0;
+}
+
+.btn-primary:hover {
+    background: #60508e;
+}
+
+::placeholder {
+    color: #000;
+}
+
+.form-group input,
+.form-group textarea,
+label {
+    font-size: 14px;
+    color: #60508e;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    background: #5d4998;
+    border: 0;
+    border-radius: 20px;
 }
