@@ -105,4 +105,5 @@ $('body').on('click', '.activate-ask', function() {
   event.preventDefault();
   $('.tc-messenger').show();
   $('#homescreen').hide();
+  $('.ais-search-box').hide();
 });

@@ -17,8 +17,12 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-    <!-- Always use `2.x` versions in production rather than `2` to mitigate any side effects on your website,
-    Find the latest version on InstantSearch.js website: https://community.algolia.com/instantsearch.js/v2/guides/usage.html -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("user_l80bodxsm7dIdbUNpJ3kj");
+    })();
+    </script>
 </head>
 
 
@@ -82,7 +86,9 @@
                             <label class="form-check-label" for="defaultCheck1">
                                 Include screenshot
                             </label>
-                            <div id="tc-screenshoot-sample" class="tc-screenshoot-sample"></div>
+                            <div id="tc-screenshoot-sample" class="tc-screenshoot-sample">
+                                <img class="tc-screenshot-image" src="https://res.cloudinary.com/dmi1rx1pn/image/upload/v1538135489/7juybxl.png" alt="">
+                            </div>
                         </div>
                         <div class="form-group">
                             <input id="tc-browser"type="hidden" placeholder="" name="browser">

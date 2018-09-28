@@ -327,3 +327,7 @@ button:focus {
 #homescreen a {
     padding-left: 5px;
 }
+
+.tc-screenshot-image {
+    width: 300px;
+}
