@@ -30,13 +30,14 @@ function getBrowser() {
         if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
         return M.join(' ');
     })();
-    $('#tc-browser').val(hello);
+   
 
     console.log(navigator.sayswho);
     return navigator.sayswho
 }
 
-
+var currentNavigator =  getBrowser()
+$('#tc-browser').val(currentNavigator);
 /* Get user info */
 
 function getCookieValue(cookieName) {
@@ -85,3 +86,6 @@ function getUserInfo() {
 }
 
 getUserInfo();
+
+
+/* Make support bee request to open ticket */
