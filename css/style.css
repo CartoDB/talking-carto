@@ -237,6 +237,16 @@ html .ui-button.ui-state-disabled:active {
     background: #5d4998;
 }
 
+button:focus {
+    outline: none;
+    outline-color: none;
+    outline-style: none;
+    outline-width: 0;
+    outline: none;
+    outline-color: none;
+    outline-style: none;
+    outline-width: 0;
+}
 
 .ui-state-active:focus {
     border: 0;
