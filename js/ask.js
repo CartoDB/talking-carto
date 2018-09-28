@@ -1,4 +1,4 @@
-getScreenshot();
+// getScreenshot();
 
 function getScreenshot() {
     html2canvas(document.querySelector('html')).then(canvas => {
@@ -38,6 +38,7 @@ function getBrowser() {
 
 var currentNavigator =  getBrowser()
 $('#tc-browser').val(currentNavigator);
+
 /* Get user info */
 
 function getCookieValue(cookieName) {
