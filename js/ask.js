@@ -35,3 +35,53 @@ function getBrowser() {
     console.log(navigator.sayswho);
     return navigator.sayswho
 }
+
+
+/* Get user info */
+
+function getCookieValue(cookieName) {
+    var cookies = document.cookie.split("; ");
+    for(var i = 0; i < cookies.length; i++){
+      var keyValue = cookies[i].split("=");
+      if(keyValue[0] == cookieName)
+        return keyValue[1];
+    }
+    return null;
+}
+
+
+function isConnected(){
+    if(getCookieValue("_cartodb_base_url"))
+      return true;
+    return false;
+}
+
+function getBaseURL() {
+    return decodeURIComponent(getCookieValue("_cartodb_base_url"))
+}
+
+function setUserInfoForm(userData) {
+    $('#tc-email').val(userData.email);
+}
+
+function getUserInfo() {
+    if (isConnected()) {
+        var apiUrl = getBaseURL() + "/api/v3/me";
+        fetch(apiUrl, {
+            method: 'GET',
+            credentials: 'include',
+            mode: 'cors'
+          }
+        ).then(function(response) {
+            console.log('Error', response)
+        }).then(function(jsonResponse) {
+            var userInfo = jsonResponse;
+            if(jsonResponse.user_data){
+                setUserInfoForm(jsonResponse.user_data)
+                console.log('User Data', jsonResponse.user_data)
+            }
+        })
+    }
+}
+
+getUserInfo();
