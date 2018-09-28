@@ -34,7 +34,7 @@ body {
 }
 
 .tc-messenger-header ul {
-    padding: 10px 20px !important;
+    padding: 10px 20px 0 20px !important;
 }
 
 .tc-answers{
@@ -89,16 +89,20 @@ body {
 html .ui-dialog-titlebar .ui-button.ui-state-disabled:hover, 
 html .ui-dialog-titlebar .ui-button.ui-state-disabled:active {
     border: none;
-    background: rgba(57,73,86,0.5);
+    background: #ededed;
     font-weight: normal;
     border-radius: 20px;
     color: #fff;
-    width: 80px;
+    width: 25px;
     height: 25px;
 }
 
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus {
+    background: rgba(57,73,86,0.5);
+}
+
 .ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-button:hover .ui-icon, .ui-button:focus .ui-icon {
-    background-image: none !important;
+    /*background-image: none !important;*/
 }
 
 .ui-dialog .ui-dialog-titlebar-close {
@@ -109,12 +113,11 @@ html .ui-dialog-titlebar .ui-button.ui-state-disabled:active {
 .ui-widget-header .ui-icon,
 .ui-icon, 
 .ui-widget-content .ui-icon {
-    background-image: none;
-    width: 200px;
+    width: 15px;
 }
 
 .ui-icon-closethick::before {
-    content: "close";
+    content: "x";
 }
 
 #tc-answers.ui-tabs-panel {
@@ -123,7 +126,7 @@ html .ui-dialog-titlebar .ui-button.ui-state-disabled:active {
 
 #tc-messenger-suggestions {
     padding: 10px 20px;
-    max-height: 360px;
+    max-height: 375px;
 }
 
 #tc-messenger-suggestions .post-item a {
@@ -154,6 +157,7 @@ html .ui-dialog-titlebar .ui-button.ui-state-disabled:active {
     position: absolute;
     bottom: 0;
     height: auto;
+    margin-top:3px;
 }
 
 .ais-search-box--input {
@@ -194,6 +198,14 @@ html .ui-dialog-titlebar .ui-button.ui-state-disabled:active {
     color: #000;
 }
 
+.ui-button-icon-only .ui-icon {
+    position: absolute;
+    top: 50%;
+    left: 49%;
+    margin-top: -8px;
+    margin-left: -8px;
+}
+
 .form-group input,
 .form-group textarea,
 label {
@@ -201,8 +213,43 @@ label {
     color: #60508e;
 }
 
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
-    background: #5d4998;
+.ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default, 
+.ui-button, html .ui-button.ui-state-disabled:hover, 
+html .ui-button.ui-state-disabled:active {
     border: 0;
+    background: none;
+    color: #fff !important;
     border-radius: 20px;
+    border: 0 !important;
+}
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited, a.ui-button, a:link.ui-button, a:visited.ui-button, .ui-button {
+    color: #fff;
+}
+
+.ui-tabs-active.ui-state-active {
+    background: #5d4998;
+}
+
+
+.ui-state-active:focus {
+    border: 0;
+    outline-color: none;
+    outline: none;
+
+}
+
+.arrow {
+    width: 40px;
+    height: 50px;
+    float: left;
+    display: block;
+    margin-left: 5px;
+    line-height: 45px;
+    color: #fff !important;
+}
+
+.arrow path {
+    fill: #ffffff;
 }
