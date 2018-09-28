@@ -335,3 +335,7 @@ button:focus {
 .form-sent {
     display: none;
 }
+
+.form-sent a {
+    color: #3197d6;
+}
